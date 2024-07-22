@@ -1,0 +1,121 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Postajalisce {
+  _id: ID!
+  ime: String!
+  naslov: String!
+  latitude: Float!
+  longitude: Float!
+  kolesaArray: [Kolo]!
+}
+
+type Kolo {
+  _id: ID!
+  serijska_stevilka: String!
+  mnenje: [Int]!
+  jeIzposojen: Boolean!
+}
+
+type Izposoja {
+  _id: ID!
+  start_date: String!
+  end_date: String
+  start_station_id: String!
+  end_station_id: String
+  bike_id: String!
+  duration: Int
+  trenutna_zasedenost_start: Int!
+  trenutna_zasedenost_end: Int
+  weather: String!
+  start_station: String!
+  end_station: String!
+  username: String!
+}
+
+input NewKolo {
+  serijska_stevilka: String!
+}
+
+input UpdateKolo {
+  _id: ID!
+  serijska_stevilka: String
+  mnenje: [Int]
+}
+
+input NewPostajalisce {
+  ime: String!
+  naslov: String!
+  latitude: Float!
+  longitude: Float!
+}
+
+input KoloInput {
+  _id: ID!
+  serijska_stevilka: String!
+  mnenje: [Int]!
+  jeIzposojen: Boolean!
+}
+
+input UpdatePostajalisce {
+  _id: ID!
+  ime: String
+  naslov: String
+  latitude: Float
+  longitude: Float
+  kolesaArray: [KoloInput]
+}
+
+input IzposojaKolesa {
+  bike_id: String!
+  weather: String!
+  username: String!
+}
+
+input VraciloKolesa {
+  _id: ID!
+  bike_id: String!
+  end_station_id: String!
+  end_station: String!
+}
+
+input ChangeKolo {
+  _id: String!
+  serijska_stevilka: String
+  mnenje: [Int]
+}
+
+input ChangePostajalisce {
+  _id: String!
+  ime: String
+  naslov: String
+  latitude: Float
+  longitude: Float
+}
+
+type Query {
+  kolo(_id: String!): Kolo!
+  kolesa: [Kolo!]!
+  postajalisce(_id: String!): Postajalisce!
+  postajalisca: [Postajalisce!]!
+  izposoja(_id: String!): Izposoja!
+  izposoje: [Izposoja!]!
+  izposojeForUser(username: String!): [Izposoja!]!
+  nearestPostajalisce(latitude: Float!, longitude: Float!, stPostaj: Int!): [Postajalisce!]
+}
+
+type Mutation {
+  createKolo(input: NewKolo!): Kolo!
+  updateKolo(input: UpdateKolo!): Kolo!
+  deleteKolo(input: String!): String!
+  createPostajalisce(input: NewPostajalisce!): Postajalisce!
+  updatePostajalisce(input: UpdatePostajalisce!): Postajalisce!
+  deletePostajalisce(input: String!): String!
+  izposojaKolesa(input: IzposojaKolesa!): Izposoja!
+  vraciloKolesa(input: VraciloKolesa!): Izposoja!
+  deleteIzposoja(input: String!): String!
+  insertMnenje(_id: String!, mnenje: Int!): String!
+  changeKolo(input: ChangeKolo!): String!
+  changePostajalisce(input: ChangePostajalisce!): String!
+}
