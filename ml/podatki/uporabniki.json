@@ -1,0 +1,82 @@
+[
+    {
+        "ime": "John",
+        "priimek": "Doe",
+        "email": "john.doe@example.com",
+        "geslo": "password1",
+        "datumRojstva": "1990-01-01",
+        "logsArray": []
+    },
+    {
+        "ime": "Jane",
+        "priimek": "Smith",
+        "email": "jane.smith@example.com",
+        "geslo": "password2",
+        "datumRojstva": "1992-03-15",
+        "logsArray": []
+    },
+    {
+        "ime": "Mark",
+        "priimek": "Johnson",
+        "email": "mark.johnson@example.com",
+        "geslo": "password3",
+        "datumRojstva": "1985-07-20",
+        "logsArray": []
+    },
+    {
+        "ime": "Emily",
+        "priimek": "Brown",
+        "email": "emily.brown@example.com",
+        "geslo": "password4",
+        "datumRojstva": "1998-11-10",
+        "logsArray": []
+    },
+    {
+        "ime": "Michael",
+        "priimek": "Davis",
+        "email": "michael.davis@example.com",
+        "geslo": "password5",
+        "datumRojstva": "1995-05-05",
+        "logsArray": []
+    },
+    {
+        "ime": "Emma",
+        "priimek": "Wilson",
+        "email": "emma.wilson@example.com",
+        "geslo": "password6",
+        "datumRojstva": "1993-09-30",
+        "logsArray": []
+    },
+    {
+        "ime": "David",
+        "priimek": "Miller",
+        "email": "david.miller@example.com",
+        "geslo": "password7",
+        "datumRojstva": "1988-12-25",
+        "logsArray": []
+    },
+    {
+        "ime": "Olivia",
+        "priimek": "Taylor",
+        "email": "olivia.taylor@example.com",
+        "geslo": "password8",
+        "datumRojstva": "1991-04-18",
+        "logsArray": []
+    },
+    {
+        "ime": "Daniel",
+        "priimek": "Anderson",
+        "email": "daniel.anderson@example.com",
+        "geslo": "password9",
+        "datumRojstva": "1987-06-08",
+        "logsArray": []
+    },
+    {
+        "ime": "Sophia",
+        "priimek": "Thomas",
+        "email": "sophia.thomas@example.com",
+        "geslo": "password10",
+        "datumRojstva": "1994-02-12",
+        "logsArray": []
+    }
+]
